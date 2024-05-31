@@ -43,12 +43,12 @@
     "check": "npm-check --development -u",
     "doctor": "npm doctor",
     "format": "npm run test:lint -- --fix",
-    "release": "git tag %npm_package_version% && git push && git push --tags",
+    "release": "set version=$(%npm_package_version%) && git commit -am $version && git tag $version",
     "test": "npx concurrently 'npm run test:lint' 'npm run test:jest'",
     "lint": "npx eslint .",
     "unit": "npx jest",
     "update": "npm update --save"
   },
   "type": "module",
-  "version": "0.6.0"
+  "version": "0.7.0"
 }
