@@ -16,7 +16,7 @@ import { SocketDriver } from './drivers/SocketDriver.js'
 
 /**
  *
- * @type {['null', ...SerialDriver]}
+ * @type {SerialDriver}
  * @constant
  */
 export const DRIVERS = [
