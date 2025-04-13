@@ -26,7 +26,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
-          --app dmx \
+          --app ${{ github.event.repository.name }} \
           --tag branch=${{ github.head_ref }} \
           --jssrc .
       env:
