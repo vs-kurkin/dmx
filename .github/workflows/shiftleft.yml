@@ -30,7 +30,7 @@ jobs:
         ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
           --app ${{ github.event.repository.name }} \
           --tag branch=${{ github.head_ref }} \
-          --app-language auto
+          --jssrc .
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
